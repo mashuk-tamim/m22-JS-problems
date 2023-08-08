@@ -1,3 +1,4 @@
+const prompt = require('prompt-sync')();
 // JavaScript program for Merge Sort
  
 // Merges two sub-arrays of arr[].
@@ -75,12 +76,18 @@ function mergeSort(arr,l, r){
 function printArray( A, size)
 {
     for (var i = 0; i < size; i++)
-       console.log(  A[i] + " ");
+       console.log(A[i]);
 }
- 
- 
-var arr = [ 12, 11, 13, 5, 6, 7 ];
-    var arr_size = arr.length;
+
+
+var arr_size;
+arr_size = prompt('enter the array size:');
+
+var arr = [];
+for(let i=0; i<arr_size; i++)
+{
+    arr[i]=parseInt(prompt());
+}
  
     console.log(  "Given array is ");
     printArray(arr, arr_size);
